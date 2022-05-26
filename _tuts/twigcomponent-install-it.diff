@@ -1,0 +1,321 @@
+diff --git a/composer.json b/composer.json
+index 0008035..3cf8acb 100644
+--- a/composer.json
++++ b/composer.json
+@@ -19,6 +19,7 @@
+         "symfony/runtime": "6.0.*",
+         "symfony/twig-bundle": "6.0.*",
+         "symfony/ux-turbo": "^2.1",
++        "symfony/ux-twig-component": "^2.1",
+         "symfony/webpack-encore-bundle": "^1.14",
+         "symfony/yaml": "6.0.*",
+         "twig/extra-bundle": "^2.12|^3.0",
+diff --git a/composer.lock b/composer.lock
+index e1089e7..e9aa248 100644
+--- a/composer.lock
++++ b/composer.lock
+@@ -4,7 +4,7 @@
+         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+         "This file is @generated automatically"
+     ],
+-    "content-hash": "a04c9a1cff2f023d2696a2052951518d",
++    "content-hash": "d7b9f45593ddb322c50bdac16e08b073",
+     "packages": [
+         {
+             "name": "doctrine/annotations",
+@@ -3828,6 +3828,174 @@
+             ],
+             "time": "2021-09-13T13:58:11+00:00"
+         },
++        {
++            "name": "symfony/property-access",
++            "version": "v6.0.8",
++            "source": {
++                "type": "git",
++                "url": "https://github.com/symfony/property-access.git",
++                "reference": "e5ac708a97933e9680b81b92eb90a5e301490d72"
++            },
++            "dist": {
++                "type": "zip",
++                "url": "https://api.github.com/repos/symfony/property-access/zipball/e5ac708a97933e9680b81b92eb90a5e301490d72",
++                "reference": "e5ac708a97933e9680b81b92eb90a5e301490d72",
++                "shasum": ""
++            },
++            "require": {
++                "php": ">=8.0.2",
++                "symfony/property-info": "^5.4|^6.0"
++            },
++            "require-dev": {
++                "symfony/cache": "^5.4|^6.0"
++            },
++            "suggest": {
++                "psr/cache-implementation": "To cache access methods."
++            },
++            "type": "library",
++            "autoload": {
++                "psr-4": {
++                    "Symfony\\Component\\PropertyAccess\\": ""
++                },
++                "exclude-from-classmap": [
++                    "/Tests/"
++                ]
++            },
++            "notification-url": "https://packagist.org/downloads/",
++            "license": [
++                "MIT"
++            ],
++            "authors": [
++                {
++                    "name": "Fabien Potencier",
++                    "email": "fabien@symfony.com"
++                },
++                {
++                    "name": "Symfony Community",
++                    "homepage": "https://symfony.com/contributors"
++                }
++            ],
++            "description": "Provides functions to read and write from/to an object or array using a simple string notation",
++            "homepage": "https://symfony.com",
++            "keywords": [
++                "access",
++                "array",
++                "extraction",
++                "index",
++                "injection",
++                "object",
++                "property",
++                "property path",
++                "reflection"
++            ],
++            "support": {
++                "source": "https://github.com/symfony/property-access/tree/v6.0.8"
++            },
++            "funding": [
++                {
++                    "url": "https://symfony.com/sponsor",
++                    "type": "custom"
++                },
++                {
++                    "url": "https://github.com/fabpot",
++                    "type": "github"
++                },
++                {
++                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
++                    "type": "tidelift"
++                }
++            ],
++            "time": "2022-04-20T15:01:42+00:00"
++        },
++        {
++            "name": "symfony/property-info",
++            "version": "v6.0.7",
++            "source": {
++                "type": "git",
++                "url": "https://github.com/symfony/property-info.git",
++                "reference": "0f26f0870f05d65d5c06681ecbf36e546204f4b5"
++            },
++            "dist": {
++                "type": "zip",
++                "url": "https://api.github.com/repos/symfony/property-info/zipball/0f26f0870f05d65d5c06681ecbf36e546204f4b5",
++                "reference": "0f26f0870f05d65d5c06681ecbf36e546204f4b5",
++                "shasum": ""
++            },
++            "require": {
++                "php": ">=8.0.2",
++                "symfony/string": "^5.4|^6.0"
++            },
++            "conflict": {
++                "phpdocumentor/reflection-docblock": "<5.2",
++                "phpdocumentor/type-resolver": "<1.4.0",
++                "symfony/dependency-injection": "<5.4"
++            },
++            "require-dev": {
++                "doctrine/annotations": "^1.10.4",
++                "phpdocumentor/reflection-docblock": "^5.2",
++                "phpstan/phpdoc-parser": "^1.0",
++                "symfony/cache": "^5.4|^6.0",
++                "symfony/dependency-injection": "^5.4|^6.0",
++                "symfony/serializer": "^5.4|^6.0"
++            },
++            "suggest": {
++                "phpdocumentor/reflection-docblock": "To use the PHPDoc",
++                "psr/cache-implementation": "To cache results",
++                "symfony/doctrine-bridge": "To use Doctrine metadata",
++                "symfony/serializer": "To use Serializer metadata"
++            },
++            "type": "library",
++            "autoload": {
++                "psr-4": {
++                    "Symfony\\Component\\PropertyInfo\\": ""
++                },
++                "exclude-from-classmap": [
++                    "/Tests/"
++                ]
++            },
++            "notification-url": "https://packagist.org/downloads/",
++            "license": [
++                "MIT"
++            ],
++            "authors": [
++                {
++                    "name": "Kévin Dunglas",
++                    "email": "dunglas@gmail.com"
++                },
++                {
++                    "name": "Symfony Community",
++                    "homepage": "https://symfony.com/contributors"
++                }
++            ],
++            "description": "Extracts information about PHP class' properties using metadata of popular sources",
++            "homepage": "https://symfony.com",
++            "keywords": [
++                "doctrine",
++                "phpdoc",
++                "property",
++                "symfony",
++                "type",
++                "validator"
++            ],
++            "support": {
++                "source": "https://github.com/symfony/property-info/tree/v6.0.7"
++            },
++            "funding": [
++                {
++                    "url": "https://symfony.com/sponsor",
++                    "type": "custom"
++                },
++                {
++                    "url": "https://github.com/fabpot",
++                    "type": "github"
++                },
++                {
++                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
++                    "type": "tidelift"
++                }
++            ],
++            "time": "2022-03-31T17:18:25+00:00"
++        },
+         {
+             "name": "symfony/proxy-manager-bridge",
+             "version": "v6.0.6",
+@@ -4669,6 +4837,83 @@
+             ],
+             "time": "2022-03-16T00:41:03+00:00"
+         },
++        {
++            "name": "symfony/ux-twig-component",
++            "version": "v2.1.1",
++            "source": {
++                "type": "git",
++                "url": "https://github.com/symfony/ux-twig-component.git",
++                "reference": "aa332fe20ea58a5a8248c2ee39378b970b7bb44b"
++            },
++            "dist": {
++                "type": "zip",
++                "url": "https://api.github.com/repos/symfony/ux-twig-component/zipball/aa332fe20ea58a5a8248c2ee39378b970b7bb44b",
++                "reference": "aa332fe20ea58a5a8248c2ee39378b970b7bb44b",
++                "shasum": ""
++            },
++            "require": {
++                "php": ">=8.0",
++                "symfony/dependency-injection": "^5.4|^6.0",
++                "symfony/event-dispatcher": "^5.4|^6.0",
++                "symfony/property-access": "^5.4|^6.0",
++                "twig/twig": "^2.0|^3.0"
++            },
++            "conflict": {
++                "symfony/config": "<5.4.0"
++            },
++            "require-dev": {
++                "symfony/framework-bundle": "^5.4|^6.0",
++                "symfony/phpunit-bridge": "^6.0",
++                "symfony/twig-bundle": "^5.4|^6.0"
++            },
++            "type": "symfony-bundle",
++            "extra": {
++                "thanks": {
++                    "name": "symfony/ux",
++                    "url": "https://github.com/symfony/ux"
++                }
++            },
++            "autoload": {
++                "psr-4": {
++                    "Symfony\\UX\\TwigComponent\\": "src/"
++                }
++            },
++            "notification-url": "https://packagist.org/downloads/",
++            "license": [
++                "MIT"
++            ],
++            "authors": [
++                {
++                    "name": "Symfony Community",
++                    "homepage": "https://symfony.com/contributors"
++                }
++            ],
++            "description": "Twig components for Symfony",
++            "homepage": "https://symfony.com",
++            "keywords": [
++                "components",
++                "symfony-ux",
++                "twig"
++            ],
++            "support": {
++                "source": "https://github.com/symfony/ux-twig-component/tree/v2.1.1"
++            },
++            "funding": [
++                {
++                    "url": "https://symfony.com/sponsor",
++                    "type": "custom"
++                },
++                {
++                    "url": "https://github.com/fabpot",
++                    "type": "github"
++                },
++                {
++                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
++                    "type": "tidelift"
++                }
++            ],
++            "time": "2022-03-14T13:15:13+00:00"
++        },
+         {
+             "name": "symfony/var-dumper",
+             "version": "v6.0.8",
+diff --git a/config/bundles.php b/config/bundles.php
+index bd048de..1566f62 100644
+--- a/config/bundles.php
++++ b/config/bundles.php
+@@ -12,4 +12,5 @@ return [
+     Symfony\Bundle\DebugBundle\DebugBundle::class => ['dev' => true],
+     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
+     Symfony\UX\Turbo\TurboBundle::class => ['all' => true],
++    Symfony\UX\TwigComponent\TwigComponentBundle::class => ['all' => true],
+ ];
+diff --git a/symfony.lock b/symfony.lock
+index 7ab544f..a821722 100644
+--- a/symfony.lock
++++ b/symfony.lock
+@@ -234,6 +234,12 @@
+     "symfony/polyfill-php81": {
+         "version": "v1.25.0"
+     },
++    "symfony/property-access": {
++        "version": "v6.0.8"
++    },
++    "symfony/property-info": {
++        "version": "v6.0.7"
++    },
+     "symfony/proxy-manager-bridge": {
+         "version": "v6.0.6"
+     },
+@@ -284,6 +290,9 @@
+     "symfony/ux-turbo": {
+         "version": "v2.1.1"
+     },
++    "symfony/ux-twig-component": {
++        "version": "v2.1.1"
++    },
+     "symfony/var-dumper": {
+         "version": "v6.0.8"
+     },

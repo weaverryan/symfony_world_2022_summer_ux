@@ -1,0 +1,25 @@
+diff --git a/assets/bootstrap.js b/assets/bootstrap.js
+index 4ab2df6..856f6fb 100644
+--- a/assets/bootstrap.js
++++ b/assets/bootstrap.js
+@@ -1,4 +1,6 @@
+ import { startStimulusApp } from '@symfony/stimulus-bridge';
++import LiveController from '@symfony/ux-live-component';
++import '@symfony/ux-live-component/styles/live.css';
+ 
+ // Registers Stimulus controllers from controllers.json and in the controllers/ directory
+ export const app = startStimulusApp(require.context(
+@@ -8,4 +10,4 @@ export const app = startStimulusApp(require.context(
+ ));
+ 
+ // register any custom, 3rd party controllers here
+-// app.register('some_controller_name', SomeImportedController);
++app.register('live', LiveController);
+diff --git a/config/routes/live_component.yaml b/config/routes/live_component.yaml
+new file mode 100644
+index 0000000..3122dc9
+--- /dev/null
++++ b/config/routes/live_component.yaml
+@@ -0,0 +1,2 @@
++live_component:
++    resource: '@LiveComponentBundle/Resources/config/routing/live_component.xml'

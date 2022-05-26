@@ -1,0 +1,12 @@
+diff --git a/assets/controllers/markdown_controller.js b/assets/controllers/markdown_controller.js
+index cb7b7f4..a1eedb4 100644
+--- a/assets/controllers/markdown_controller.js
++++ b/assets/controllers/markdown_controller.js
+@@ -1,6 +1,7 @@
+ import { Controller } from '@hotwired/stimulus';
+ import snarkdown from 'snarkdown';
+ 
++/* stimulusFetch: 'lazy' */
+ export default class extends Controller {
+     static targets = ['output'];
+ 

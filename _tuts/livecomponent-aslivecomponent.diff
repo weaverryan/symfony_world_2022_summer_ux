@@ -1,0 +1,21 @@
+diff --git a/src/Twig/SearchPackagesComponent.php b/src/Twig/SearchPackagesComponent.php
+index 42aa64f..8f5e87d 100644
+--- a/src/Twig/SearchPackagesComponent.php
++++ b/src/Twig/SearchPackagesComponent.php
+@@ -3,11 +3,14 @@
+ namespace App\Twig;
+ 
+ use App\Repository\PackageRepository;
+-use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
++use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
++use Symfony\UX\LiveComponent\DefaultActionTrait;
+ 
+-#[AsTwigComponent('search_packages')]
++#[AsLiveComponent('search_packages')]
+ class SearchPackagesComponent
+ {
++    use DefaultActionTrait;
++
+     public string $query = '';
+ 
+     public function __construct(
