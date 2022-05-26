@@ -13,4 +13,23 @@ class MainController extends AbstractController
     {
         return $this->render('main/homepage.html.twig');
     }
+
+    #[Route('/components')]
+    public function components(): Response
+    {
+        $components = [
+            'Turbo' => 'purple',
+            'Live Components' => 'red',
+            'Chart.js' => 'green',
+            'Typed' => 'yellow',
+            'Cropper.js' => 'blue',
+            'Dropzone' => 'magenta',
+            'Autocomplete' => 'purple',
+            'Twig Components' => 'red',
+        ];
+
+        return $this->render('main/components.html.twig', [
+            'components' => $components,
+        ]);
+    }
 }
