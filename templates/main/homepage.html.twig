@@ -6,12 +6,18 @@
 
         <div class="row">
             <div class="col-7">
-                {{ component('alert', { message: 'Write some markdown!' }) }}
+                {% component alert with { type: 'success' } %}
+                    {% block message %}
+                        <span class="fa fa-code"></span>
+                        Write some markdown
+                    {% endblock %}
+                {% endcomponent %}
 
-                {{ component('alert', {
-                    type: 'danger',
-                    message: 'But make it interesting!!'
-                }) }}
+                {% component alert with { type: 'danger' } %}
+                    {% block message %}
+                        But make it interesting!!
+                    {% endblock %}
+                {% endcomponent %}
             </div>
         </div>
 
