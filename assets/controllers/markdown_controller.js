@@ -2,8 +2,10 @@ import { Controller } from '@hotwired/stimulus';
 import snarkdown from 'snarkdown';
 
 export default class extends Controller {
+    static targets = ['output'];
+
     convert(event) {
         const rawText = event.currentTarget.value;
-        console.log(snarkdown(rawText));
+        this.outputTarget.innerHTML = snarkdown(rawText);
     }
 }
