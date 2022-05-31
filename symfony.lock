@@ -281,6 +281,9 @@
             "templates/base.html.twig"
         ]
     },
+    "symfony/ux-turbo": {
+        "version": "v2.1.1"
+    },
     "symfony/var-dumper": {
         "version": "v6.0.8"
     },
