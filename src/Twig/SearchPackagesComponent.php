@@ -3,11 +3,14 @@
 namespace App\Twig;
 
 use App\Repository\PackageRepository;
-use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
+use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
+use Symfony\UX\LiveComponent\DefaultActionTrait;
 
-#[AsTwigComponent('search_packages')]
+#[AsLiveComponent('search_packages')]
 class SearchPackagesComponent
 {
+    use DefaultActionTrait;
+
     public string $query = '';
 
     public function __construct(
