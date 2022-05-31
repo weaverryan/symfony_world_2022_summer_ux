@@ -3,7 +3,7 @@
 {% block body %}
     <div class="container">
         <h1>Symfony Live Summer 2022!</h1>
-        <div class="row">
+        <div class="row" {{ stimulus_controller('markdown') }}>
             <div class="col-3">
                 <textarea
                     class="form-control"
