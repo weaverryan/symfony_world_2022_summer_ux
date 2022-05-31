@@ -1,2 +1,54 @@
 @import '~bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.css';
+
+body {
+    padding-top: 50px;
+}
+
+.markdown-result {
+    border: 3px dashed maroon;
+}
+.arrow-box {
+    padding-top: 40%;
+    font-size: 3rem;
+}
+
+.component-box {
+    align-items: center;
+    display: inline-flex;
+    background: #FFFFFF;
+    border: 0.668768px solid #E7E7E7;
+    border-radius: 15.0811px;
+    position: relative;
+    padding: 10px;
+}
+.component-box .rectangle {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 10px;
+    border-radius: 11px;
+}
+.component-box .rectangle.purple {
+    background: linear-gradient(95.22deg, #5920A0 -4.7%, #844EC9 105.43%), #AC2727;
+}
+.component-box .rectangle.red {
+    background-color: #AC2727;
+}
+.component-box .rectangle.green {
+    background: linear-gradient(95.26deg, #21A81E 0.06%, #45DD42 108.28%), #AC2727;
+}
+.component-box .rectangle.yellow {
+    background: linear-gradient(139.69deg, #AC9F27 -2.7%, #D5C53A 106.96%), #AC2727;
+}
+.component-box .rectangle.blue {
+    background: linear-gradient(135.73deg, #1E8FA8 -7.05%, #3FC0DC 105.11%), #AC2727;
+}
+.component-box .rectangle.magenta {
+    background: linear-gradient(133.55deg, #AC2777 -8.06%, #E04EA6 104.87%), linear-gradient(135.73deg, #1E8FA8 -7.05%, #3FC0DC 105.11%), #AC2727;
+}
+.component-box .name {
+    color: #0A0A0A;
+    display: block;
+    font-size: .9em;
+}
