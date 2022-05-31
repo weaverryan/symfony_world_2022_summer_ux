@@ -259,6 +259,9 @@
     "symfony/runtime": {
         "version": "v6.0.8"
     },
+    "symfony/serializer": {
+        "version": "v6.0.8"
+    },
     "symfony/service-contracts": {
         "version": "v3.0.1"
     },
@@ -286,6 +289,9 @@
             "config/packages/twig.yaml",
             "templates/base.html.twig"
         ]
+    },
+    "symfony/ux-live-component": {
+        "version": "v2.1.1"
     },
     "symfony/ux-turbo": {
         "version": "v2.1.1"
