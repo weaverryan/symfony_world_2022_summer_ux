@@ -9,6 +9,7 @@
                     class="form-control"
                     placeholder="type some **markdown**!"
                     rows="5"
+                    {{ stimulus_action('markdown', 'convert') }}
                 ></textarea>
             </div>
             <div class="col-1 text-center">
