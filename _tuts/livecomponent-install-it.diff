@@ -1,5 +1,5 @@
 diff --git a/composer.json b/composer.json
-index 3cf8acb..bb4af8d 100644
+index 1bc4c91..cfd5241 100644
 --- a/composer.json
 +++ b/composer.json
 @@ -18,6 +18,7 @@
@@ -8,18 +8,18 @@ index 3cf8acb..bb4af8d 100644
          "symfony/twig-bundle": "6.0.*",
 +        "symfony/ux-live-component": "^2.1",
          "symfony/ux-turbo": "^2.1",
-         "symfony/ux-twig-component": "^2.1",
+         "symfony/ux-twig-component": "^2.x-dev",
          "symfony/webpack-encore-bundle": "^1.14",
 diff --git a/composer.lock b/composer.lock
-index e9aa248..9add75d 100644
+index 181f3c9..62a1c3a 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
          "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
          "This file is @generated automatically"
      ],
--    "content-hash": "d7b9f45593ddb322c50bdac16e08b073",
-+    "content-hash": "1233433829c4e520e79dc5752044fc49",
+-    "content-hash": "530be0ba8bb409c912f17df300fd2ef4",
++    "content-hash": "4abd8ce0a028275d693da692a20d7228",
      "packages": [
          {
              "name": "doctrine/annotations",

@@ -1,17 +1,17 @@
 diff --git a/composer.json b/composer.json
-index 0008035..3cf8acb 100644
+index 0008035..1bc4c91 100644
 --- a/composer.json
 +++ b/composer.json
 @@ -19,6 +19,7 @@
          "symfony/runtime": "6.0.*",
          "symfony/twig-bundle": "6.0.*",
          "symfony/ux-turbo": "^2.1",
-+        "symfony/ux-twig-component": "^2.1",
++        "symfony/ux-twig-component": "^2.x-dev",
          "symfony/webpack-encore-bundle": "^1.14",
          "symfony/yaml": "6.0.*",
          "twig/extra-bundle": "^2.12|^3.0",
 diff --git a/composer.lock b/composer.lock
-index e1089e7..e9aa248 100644
+index e1089e7..181f3c9 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
@@ -19,7 +19,7 @@ index e1089e7..e9aa248 100644
          "This file is @generated automatically"
      ],
 -    "content-hash": "a04c9a1cff2f023d2696a2052951518d",
-+    "content-hash": "d7b9f45593ddb322c50bdac16e08b073",
++    "content-hash": "530be0ba8bb409c912f17df300fd2ef4",
      "packages": [
          {
              "name": "doctrine/annotations",
@@ -198,22 +198,22 @@ index e1089e7..e9aa248 100644
          {
              "name": "symfony/proxy-manager-bridge",
              "version": "v6.0.6",
-@@ -4669,6 +4837,83 @@
+@@ -4669,6 +4837,84 @@
              ],
              "time": "2022-03-16T00:41:03+00:00"
          },
 +        {
 +            "name": "symfony/ux-twig-component",
-+            "version": "v2.1.1",
++            "version": "2.x-dev",
 +            "source": {
 +                "type": "git",
 +                "url": "https://github.com/symfony/ux-twig-component.git",
-+                "reference": "aa332fe20ea58a5a8248c2ee39378b970b7bb44b"
++                "reference": "2169955a2a9b5a9c61fd9fdb91724d0fdca563ce"
 +            },
 +            "dist": {
 +                "type": "zip",
-+                "url": "https://api.github.com/repos/symfony/ux-twig-component/zipball/aa332fe20ea58a5a8248c2ee39378b970b7bb44b",
-+                "reference": "aa332fe20ea58a5a8248c2ee39378b970b7bb44b",
++                "url": "https://api.github.com/repos/symfony/ux-twig-component/zipball/2169955a2a9b5a9c61fd9fdb91724d0fdca563ce",
++                "reference": "2169955a2a9b5a9c61fd9fdb91724d0fdca563ce",
 +                "shasum": ""
 +            },
 +            "require": {
@@ -231,6 +231,7 @@ index e1089e7..e9aa248 100644
 +                "symfony/phpunit-bridge": "^6.0",
 +                "symfony/twig-bundle": "^5.4|^6.0"
 +            },
++            "default-branch": true,
 +            "type": "symfony-bundle",
 +            "extra": {
 +                "thanks": {
@@ -261,7 +262,7 @@ index e1089e7..e9aa248 100644
 +                "twig"
 +            ],
 +            "support": {
-+                "source": "https://github.com/symfony/ux-twig-component/tree/v2.1.1"
++                "source": "https://github.com/symfony/ux-twig-component/tree/2.x"
 +            },
 +            "funding": [
 +                {
@@ -277,11 +278,22 @@ index e1089e7..e9aa248 100644
 +                    "type": "tidelift"
 +                }
 +            ],
-+            "time": "2022-03-14T13:15:13+00:00"
++            "time": "2022-05-18T16:34:02+00:00"
 +        },
          {
              "name": "symfony/var-dumper",
              "version": "v6.0.8",
+@@ -5438,7 +5684,9 @@
+     ],
+     "aliases": [],
+     "minimum-stability": "stable",
+-    "stability-flags": [],
++    "stability-flags": {
++        "symfony/ux-twig-component": 20
++    },
+     "prefer-stable": true,
+     "prefer-lowest": false,
+     "platform": {
 diff --git a/config/bundles.php b/config/bundles.php
 index bd048de..1566f62 100644
 --- a/config/bundles.php

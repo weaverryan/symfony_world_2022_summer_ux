@@ -81,6 +81,11 @@
             "description": null
         },
         {
+            "id": "twigcomponent-add-slots",
+            "name": "TwigComponent: add slots",
+            "description": null
+        },
+        {
             "id": "twigcomponent-searchpackages-component",
             "name": "TwigComponent: SearchPackages component",
             "description": null
@@ -116,5 +121,5 @@
             "description": null
         }
     ],
-    "sha": "b4681d6811c94ed7cb143e14755c27cefb2ce4f0"
+    "sha": "d1bb69e401057c17d5dfff29da7daa263b9c0849"
 }
