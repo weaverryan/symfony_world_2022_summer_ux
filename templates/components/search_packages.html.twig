@@ -4,12 +4,12 @@
             type="search"
             value="{{ query }}"
             class="form-control"
-            placeholder="Search from {{ this.packages|length }} packages..."
+            placeholder="Search from {{ computed.packages|length }} packages..."
         >
     </div>
 
     <div>
-        {% for package in this.packages %}
+        {% for package in computed.packages %}
             <div class="component-box">
                 <span class="rectangle {{ package.color }}"></span>
                 <span class="name">{{ package.name }}</span>
