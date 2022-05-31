@@ -1,0 +1,19 @@
+<div {{ attributes }}>
+    <div class="mb-3">
+        <input
+            type="search"
+            value="{{ query }}"
+            class="form-control"
+            placeholder="Search from {{ this.packages|length }} packages..."
+        >
+    </div>
+
+    <div>
+        {% for package in this.packages %}
+            <div class="component-box">
+                <span class="rectangle {{ package.color }}"></span>
+                <span class="name">{{ package.name }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
